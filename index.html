@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pavan Kumar | Cloud & DevOps Portfolio</title>
+  <style>
+    :root {
+      --navy: #10233f;
+      --blue: #1769aa;
+      --light: #f3f7fc;
+      --text: #243247;
+      --muted: #607086;
+      --white: #ffffff;
+    }
+    * { box-sizing: border-box; scroll-behavior: smooth; }
+    body {
+      margin: 0; font-family: Arial, Helvetica, sans-serif;
+      background: var(--light); color: var(--text); line-height: 1.65;
+    }
+    header {
+      position: sticky; top: 0; z-index: 10; background: var(--navy);
+      color: white; box-shadow: 0 2px 12px #0002;
+    }
+    nav {
+      max-width: 1150px; margin: auto; padding: 14px 22px;
+      display: flex; align-items: center; justify-content: space-between; gap: 20px;
+    }
+    nav h1 { font-size: 1.25rem; margin: 0; }
+    nav ul { list-style: none; display: flex; gap: 18px; padding: 0; margin: 0; flex-wrap: wrap; }
+    nav a { color: white; text-decoration: none; font-weight: 600; }
+    nav a:hover { color: #8dd5ff; }
+    .hero {
+      background: linear-gradient(135deg, #10233f, #1769aa);
+      color: white; padding: 82px 22px; text-align: center;
+    }
+    .hero h2 { font-size: clamp(2rem, 5vw, 3.4rem); margin: 0 0 10px; }
+    .hero p { font-size: 1.15rem; margin: 8px 0; }
+    .hero .button { margin-top: 20px; }
+    .container {
+      max-width: 1150px; margin: auto; padding: 28px 22px;
+      display: grid; grid-template-columns: 310px minmax(0, 1fr); gap: 24px;
+    }
+    aside, article { min-width: 0; }
+    .panel, .section-card {
+      background: var(--white); border-radius: 14px; padding: 23px;
+      margin-bottom: 22px; box-shadow: 0 5px 22px #10233f0d;
+    }
+    .panel h2, .section-card h2 { color: var(--navy); margin-top: 0; }
+    .profile {
+      width: 150px; height: 150px; object-fit: cover; border-radius: 50%;
+      display: block; margin: 12px auto 18px; border: 4px solid #d8e9fb;
+      background: #e7eef7;
+    }
+    .profile-placeholder {
+      width: 150px; height: 150px; margin: 12px auto 18px; border-radius: 50%;
+      display: grid; place-items: center; background: #e7eef7; color: var(--navy);
+      font-size: 2.5rem; font-weight: bold; border: 4px solid #d8e9fb;
+    }
+    .info { display: grid; grid-template-columns: 1fr; margin: 12px 0; overflow-wrap: anywhere; }
+    .info strong { color: var(--navy); }
+    .quote { color: var(--muted); font-style: italic; }
+    .section-card h2 { border-bottom: 2px solid #e5edf6; padding-bottom: 10px; }
+    .skills { display: flex; flex-wrap: wrap; gap: 9px; padding: 0; list-style: none; }
+    .skills li {
+      background: #eaf3ff; color: #164d83; padding: 7px 12px;
+      border-radius: 20px; font-size: .94rem;
+    }
+    .cards { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 15px; }
+    .item {
+      border: 1px solid #e3ebf4; border-radius: 10px; padding: 17px;
+      background: #fbfdff;
+    }
+    .item h3 { margin: 0 0 7px; color: var(--navy); font-size: 1.08rem; }
+    .item p { margin: 5px 0; }
+    .button {
+      display: inline-block; padding: 11px 18px; border-radius: 7px;
+      background: #fff; color: var(--navy); text-decoration: none;
+      font-weight: bold; border: 0; cursor: pointer;
+    }
+    .button-blue { background: var(--blue); color: white; }
+    .button-blue:hover { background: #104d80; }
+    .social { display: flex; gap: 14px; flex-wrap: wrap; }
+    .social a { color: var(--blue); font-weight: bold; text-decoration: none; }
+    footer { background: var(--navy); color: white; text-align: center; padding: 25px 15px; }
+    footer a { color: #8dd5ff; }
+    @media (max-width: 780px) {
+      nav { align-items: flex-start; flex-direction: column; }
+      nav ul { gap: 12px; }
+      .container { grid-template-columns: 1fr; }
+      .hero { padding: 60px 18px; }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <nav>
+      <h1>Personal Portfolio</h1>
+      <ul>
+        <li><a href="#home">Home</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#skills">Skills</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#education">Education</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero" id="home">
+      <h2>Hello, I'm Mankala Venkata Sai Pavan Kumar</h2>
+      <p>Aspiring Cloud &amp; DevOps Engineer</p>
+      <p>Computer Science / Cloud Computing Student</p>
+      <a class="button" href="resume.pdf" download>Download My Resume (PDF)</a>
+    </section>
+
+    <div class="container">
+      <aside>
+        <section class="panel">
+          <h2>Profile</h2>
+          <img class="profile" src="pawan.jpg" alt="Pavan Kumar profile picture"
+               onerror="this.style.display='none'; document.getElementById('profile-placeholder').style.display='grid';">
+          <div class="profile-placeholder" id="profile-placeholder" style="display:none;">PK</div>
+          <p style="text-align:center;"><strong>Mankala Venkata Sai Pavan Kumar</strong></p>
+          <p style="text-align:center;color:#607086;">Cloud &amp; DevOps Learner</p>
+        </section>
+
+        <section class="panel">
+          <h2>Personal Information</h2>
+          <div class="info"><strong>Email</strong><span><a href="mailto:pavanlumarmankala@gmail.com">pavanlumarmankala@gmail.com</a></span></div>
+          <div class="info"><strong>Phone</strong><span><a href="tel:+917013680218">+91 7013680218</a></span></div>
+          <div class="info"><strong>College</strong><span>Krishna Chaithanya Degree College</span></div>
+          <div class="info"><strong>Location</strong><span>Nellore, Andhra Pradesh</span></div>
+        </section>
+
+        <section class="panel">
+          <h2>Career Goal</h2>
+          <p class="quote">To apply my technical skills and contribute to building scalable cloud solutions while continuing to learn cloud computing and DevOps practices.</p>
+        </section>
+
+        <section class="panel">
+          <h2>Languages</h2>
+          <ul>
+            <li>Telugu</li>
+            <li>Hindi</li>
+            <li>English</li>
+          </ul>
+        </section>
+      </aside>
+
+      <article>
+        <section class="section-card" id="about">
+          <h2>About Me</h2>
+          <p>
+            I am an aspiring Cloud and DevOps Engineer with hands-on experience in AWS,
+            Terraform, GitHub, Linux, and CI/CD pipelines. I am interested in cloud
+            infrastructure, automation, and reliable application deployment. I am seeking
+            an opportunity to apply my technical skills while contributing to scalable
+            cloud solutions.
+          </p>
+        </section>
+
+        <section class="section-card" id="skills">
+          <h2>Technical Skills</h2>
+          <h3>Programming Language</h3>
+          <ul class="skills"><li>Python (Basic)</li></ul>
+          <h3>Technologies</h3>
+          <ul class="skills"><li>Linux</li><li>Git</li><li>GitHub</li><li>React.js</li></ul>
+          <h3>Cloud Computing &amp; DevOps</h3>
+          <ul class="skills">
+            <li>AWS EC2</li><li>S3</li><li>IAM</li><li>RDS</li><li>VPC</li>
+            <li>Lambda</li><li>Route 53</li><li>CloudFront</li><li>ECS</li><li>ECR</li>
+            <li>Terraform</li><li>GitHub Actions</li><li>CI/CD</li><li>SonarQube</li>
+            <li>Nexus</li><li>Apache Tomcat</li><li>Docker</li>
+          </ul>
+        </section>
+
+        <section class="section-card" id="projects">
+          <h2>Projects</h2>
+          <div class="cards">
+            <div class="item">
+              <h3>3-Tier Architecture Project</h3>
+              <p>Cloud architecture project based on a three-tier design.</p>
+            </div>
+            <div class="item">
+              <h3>Terraform-Based 3-Tier Architecture</h3>
+              <p>Infrastructure automation using Terraform.</p>
+            </div>
+            <div class="item">
+              <h3>CI/CD Pipeline with GitHub</h3>
+              <p>Continuous integration and deployment workflow.</p>
+            </div>
+            <div class="item">
+              <h3>Route 53 Project</h3>
+              <p>AWS DNS and domain-routing project.</p>
+            </div>
+            <div class="item">
+              <h3>CI/CD for Java Application</h3>
+              <p>GitHub Actions, SonarQube, Nexus, and Apache Tomcat.</p>
+            </div>
+            <div class="item">
+              <h3>Automated Java Deployment</h3>
+              <p>GitHub Actions, Docker, Amazon ECR, and Amazon ECS.</p>
+            </div>
+          </div>
+        </section>
+
+        <section class="section-card" id="experience">
+          <h2>Internship &amp; Experience</h2>
+          <div class="item">
+            <h3>Web Application Development Intern</h3>
+            <p><strong>Company:</strong> ValueX Innovations</p>
+            <p><strong>Period:</strong> November 2025</p>
+            <p>Developed responsive web application components, collaborated on frontend tasks, and participated in testing, debugging, and issue resolution.</p>
+          </div>
+          <br>
+          <div class="item">
+            <h3>Frontend Web Development Intern</h3>
+            <p><strong>Company:</strong> ValueX Innovation</p>
+            <p><strong>Period:</strong> March 2026</p>
+            <p>Worked on frontend development concepts using HTML, CSS, and JavaScript, with a focus on responsive interfaces and user experience.</p>
+          </div>
+        </section>
+
+        <section class="section-card" id="education">
+          <h2>Educational Qualifications</h2>
+          <div class="item">
+            <h3>Krishna Chaithanya Degree College</h3>
+            <p><strong>Course:</strong> Degree</p>
+            <p><strong>Location:</strong> Nellore, Andhra Pradesh</p>
+            <p><strong>Period:</strong> 2022–2026</p>
+            <p><strong>Percentage:</strong> 72.25%</p>
+          </div>
+        </section>
+
+        <section class="section-card" id="resume">
+          <h2>My Resume</h2>
+          <p>Use the button below to download the PDF version of my resume.</p>
+          <a class="button button-blue" href="resume.pdf" download>Download Resume PDF</a>
+          <p><small>Make sure your PDF file is saved in this folder with the name <strong>resume.pdf</strong>.</small></p>
+        </section>
+
+        <section class="section-card" id="contact">
+          <h2>Contact &amp; Social Media</h2>
+          <p>Email: <a href="mailto:pavanlumarmankala@gmail.com">pavanlumarmankala@gmail.com</a></p>
+          <p>Phone: <a href="tel:+917013680218">+91 7013680218</a></p>
+          <div class="social">
+            <a href="https://www.instagram.com/pavan_mankala/" target="_blank" rel="noopener noreferrer">Instagram</a>
+            <a href="https://www.facebook.com/share/1CErLRpZ7y/" target="_blank" rel="noopener noreferrer">Facebook</a>
+            <a href="https://x.com/pavan_mankala" target="_blank" rel="noopener noreferrer">X (Twitter)</a>
+          </div>
+        </section>
+      </article>
+    </div>
+  </main>
+
+  <footer>
+    <p>&copy; 2026 Mankala Venkata Sai Pavan Kumar | Personal Portfolio</p>
+  </footer>
+</body>
+</html>
